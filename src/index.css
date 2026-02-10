@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --morado: #a07bb5;
+  --crema: #f8eddb;
+  --naranja: #f49b70;
+  --azul: #9bd3dd;
+  --rosa: #fb91a3;
+}
+
+/* AQUÍ FORZAMOS LA FUENTE EN TODO EL SITIO */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--crema);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Y AQUÍ FORZAMOS LA DE LOS TÍTULOS */
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Efecto Shimmer */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  transition: 0.6s;
+}
+.btn-shimmer:hover::after {
+  left: 120%;
+}
+/* CLASE MAESTRA: EFECTO CRISTAL LÍQUIDO */
+.glass {
+  background: rgba(255, 255, 255, 0.6); /* Más blanco, menos transparente */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Borde blanco puro */
+  box-shadow: 0 10px 30px -5px rgba(166, 136, 107, 0.1); /* Sombra cálida (tono café/naranja muy suave) */
+}
+
+/* Hover más brillante */
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(166, 136, 107, 0.15);
+}
+
+/* ANIMACIÓN DE FONDO (LAS MANCHAS LÍQUIDAS) */
+@keyframes float {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.blob {
+  position: absolute;
+  filter: blur(80px); /* Esto hace que se vean "líquidas" y no como círculos */
+  z-index: 0;
+  opacity: 0.6;
+  animation: float 10s infinite ease-in-out;
+}
