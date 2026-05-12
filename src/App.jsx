@@ -11,6 +11,7 @@ import Specialties from './components/sections/Specialties';
 import Gallery from './components/sections/Gallery';
 import About from './components/sections/About';
 import FAQ from './components/sections/FAQ';
+import Consultorio from './components/sections/Consultorio';
 import Contact from './components/sections/Contact';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Gallery />
           <About />
           <FAQ />
+          <Consultorio />
           <Contact />
         </main>
         <Footer />

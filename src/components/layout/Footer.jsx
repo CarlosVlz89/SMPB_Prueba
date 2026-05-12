@@ -8,8 +8,6 @@ const Footer = () => {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
 
-  // Link a Google Maps
-  const mapLink = "https://www.google.com/maps/search/?api=1&query=Av.+de+los+Científicos+659,+Colonia+Colinas+de+la+Normal,+Guadalajara,+Jalisco";
 
   // --- CONTENIDO 1: AVISO DE PRIVACIDAD ---
   const PrivacyContent = () => (
@@ -70,18 +68,33 @@ const Footer = () => {
           {/* COLUMNA 2: UBICACIÓN */}
           <div className="text-center md:text-left">
             <h4 className="font-bold uppercase tracking-widest mb-6 text-xs opacity-70">Ubicación</h4>
-            <a href={mapLink} target="_blank" rel="noreferrer" className="group block opacity-90 hover:opacity-100 transition-opacity">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
-                <i className="fa-solid fa-map-location-dot text-2xl text-rosa mt-1 group-hover:scale-110 transition-transform"></i>
-                <div className="leading-relaxed">
+            
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="flex items-start gap-3 opacity-90">
+                <i className="fa-solid fa-map-location-dot text-xl text-rosa mt-1"></i>
+                <div className="leading-relaxed text-sm text-left">
                   <p className="font-bold">Consultorio Privado</p>
                   <p>Av. de los Científicos 659,</p>
                   <p>Col. Colinas de la Normal,</p>
                   <p>Guadalajara, Jalisco.</p>
-                  <span className="text-rosa text-xs font-bold mt-2 inline-block border-b border-rosa">Ver en Google Maps</span>
                 </div>
               </div>
-            </a>
+              
+              {/* Contenedor del Mapa */}
+              <div className="w-full h-40 mt-2 rounded-xl overflow-hidden shadow-lg border border-white/20 group">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Av.+de+los+Científicos+659,+Guadalajara,+Jalisco&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación del consultorio"
+                  className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                ></iframe>
+              </div>
+            </div>
           </div>
 
           {/* COLUMNA 3: LEGAL Y REDES */}

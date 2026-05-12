@@ -88,9 +88,11 @@ export const socialLinks = [
   { icon: "fa-whatsapp", url: "https://wa.me/523324388415" }
 ];
 
+const whatsappNumber = "523324388415";
+
 export const bookingLinks = {
-  presencial: "https://calendar.app.google/XPWr52Vi4kJ9xLV28",
-  online: "https://calendar.app.google/pg6tzdwyRfey79WL8",
-  whatsapp: "https://wa.me/523324388415"
+  presencial: `https://wa.me/${whatsappNumber}?text=Hola!%20Me%20gustaría%20agendar%20una%20cita%20presencial.`,
+  online: `https://wa.me/${whatsappNumber}?text=Hola!%20Me%20gustaría%20agendar%20una%20cita%20online.`,
+  whatsapp: `https://wa.me/${whatsappNumber}?text=Hola!%20Me%20gustaría%20agendar%20una%20cita%20o%20pedir%20más%20información.`
 };
 
