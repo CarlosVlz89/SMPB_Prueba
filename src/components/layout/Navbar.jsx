@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { navLinks } from '../../data/content';
 
 // IMPORTA TUS IMÁGENES
-import logoIcon from '../../assets/logo-icon.png'; 
-import logoText from '../../assets/logo-text.png'; 
+import logoIcon from '../../assets/logo-icon.webp'; 
+import logoText from '../../assets/logo-text.webp'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import kimImg from '../../assets/kim.jpeg'; // Asegúrate de mover la foto a assets
+import kimImg from '../../assets/kim.webp'; // Asegúrate de mover la foto a assets
 
 const About = () => {
   return (

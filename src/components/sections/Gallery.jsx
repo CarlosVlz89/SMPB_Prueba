@@ -2,9 +2,9 @@ import { galleryItems } from '../../data/content';
 
 // IMPORTANTE: Importamos los archivos multimedia desde assets para que Vite los procese
 import video1 from '../../assets/galeria1.mp4';
-import img2 from '../../assets/galeria2.jpeg';
-import img3 from '../../assets/galeria3.jpeg';
-import img4 from '../../assets/galeria4.jpeg';
+import img2 from '../../assets/galeria2.webp';
+import img3 from '../../assets/galeria3.webp';
+import img4 from '../../assets/galeria4.webp';
 
 // Mapeamos los IDs del archivo de datos con los archivos importados
 const mediaMap = {

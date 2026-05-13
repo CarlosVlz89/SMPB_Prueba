@@ -1,4 +1,4 @@
-import consultorioImg from '../../assets/consultorio.png';
+import consultorioImg from '../../assets/consultorio.webp';
 
 const Consultorio = () => {
   return (

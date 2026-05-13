@@ -45,7 +45,7 @@ export const galleryItems = [
   {
     id: 2,
     type: 'image',
-    src: 'galeria2.jpeg',
+    src: 'galeria2.webp',
     alt: 'Bailarines felices',
     label: 'Comunidad',
     aspect: 'aspect-square'
@@ -53,7 +53,7 @@ export const galleryItems = [
   {
     id: 3,
     type: 'image',
-    src: 'galeria3.jpeg',
+    src: 'galeria3.webp',
     alt: 'Kim con niñas bailarinas',
     label: 'Inspiración',
     aspect: 'aspect-square'
@@ -61,7 +61,7 @@ export const galleryItems = [
   {
     id: 4,
     type: 'image',
-    src: 'galeria4.jpeg',
+    src: 'galeria4.webp',
     alt: 'Conexión y aprendizaje',
     label: 'Aprendizaje',
     aspect: 'aspect-square'
